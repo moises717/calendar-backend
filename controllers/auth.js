@@ -87,6 +87,8 @@ const loginUsuario = async (req, res) => {
 
 const revalidarToken = async (req, res) => {
 	const { uid, name } = req;
+	
+	
 
 	// generar un nuevo token
 
@@ -95,6 +97,8 @@ const revalidarToken = async (req, res) => {
 	res.json({
 		ok: true,
 		token,
+		uid,
+		name
 	});
 };
 
